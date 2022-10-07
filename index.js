@@ -5,10 +5,13 @@ let number = parseInt(prompt("pick a number between 1 and 100"));
 // console.log (random);
 
 while(random != number){
-    if (number > random){
+    if (isNaN (number)) {
+        number = parseInt(prompt("Select number, not string"));
+    }
+    else if (number > random){
         number = parseInt(prompt("It's less, try again!"));
     } 
-    else {
+    if (number < random) {
         number = parseInt(prompt("It's more, try again!"));   
     }
     console.log (number);
